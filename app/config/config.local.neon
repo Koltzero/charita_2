@@ -1,0 +1,9 @@
+database:
+    default:
+        dsn: "mysql:host=vps.spsrakovnik.cz;dbname=jungman_charita"
+        user: jungman
+        password: david1234
+        options: [PDO::MYSQL_ATTR_COMPRESS = true]
+        debugger: false # panel v Debugger baru
+        explain: false  # explain dotazů v Debugger baru
+        reflection: discovered # nebo static nebo název třídy
