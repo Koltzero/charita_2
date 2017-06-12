@@ -5,12 +5,6 @@ namespace App\Presenters;
 use Nette;
 
 
-class HomepagePresenter extends Nette\Application\UI\Presenter
-{
-    private $database;
+class HomepagePresenter extends BasePresenter{
 
-    public function __construct(Nette\Database\Context $database){
-        $this->database = $database;
-    }
-    
 }

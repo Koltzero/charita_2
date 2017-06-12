@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+        <link href="{$basePath}/css/style.css" rel="stylesheet">
+        <link href="{$basePath}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{$basePath}/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
 	<title>{ifset title}{include title|stripHtml} | {/ifset}Nette Web</title>
 </head>
@@ -12,8 +15,17 @@
 
 	{include content}
 
+        {control chat}
+
 	{block scripts}
+        <script src="{$basePath}/bower_components/jquery/dist/jquery.js"></script>
 	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+        <script src="{$basePath}/bower_components/nette.ajax.js/nette.ajax.js"></script>
+        <script>
+            $(function () {
+                    $.nette.init();
+            });
+        </script>
 	{/block}
 </body>
 </html>
